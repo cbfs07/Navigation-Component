@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.padariadeliciaapp.HomeFragment"
+        android:label="Início" />
+
+    <fragment
+        android:id="@+id/produtosFragment"
+        android:name="com.example.padariadeliciaapp.ProdutosFragment"
+        android:label="Produtos">
+        <action
+            android:id="@+id/action_produtosFragment_to_detalheProdutoFragment"
+            app:destination="@id/detalheProdutoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalheProdutoFragment"
+        android:name="com.example.padariadeliciaapp.DetalheProdutoFragment"
+        android:label="Detalhe do Produto">
+        <argument
+            android:name="produtoNome"
+            app:argType="string" />
+        <argument
+            android:name="produtoPreco"
+            app:argType="float" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.padariadeliciaapp.PerfilFragment"
+        android:label="Perfil" />
+</navigation>
